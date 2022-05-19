@@ -11,6 +11,8 @@ services:
       - "./db:/docker-entrypoint-initdb.d"
     networks:
       - lamp-docker
+    ports:
+      - 3306:3306
   www: 
     depends_on:
       - db
